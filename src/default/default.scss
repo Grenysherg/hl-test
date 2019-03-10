@@ -1,0 +1,13 @@
+@import "./mixins";
+@import "./fonts";
+@import "./colors";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+}
