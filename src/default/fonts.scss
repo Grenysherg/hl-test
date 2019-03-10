@@ -1,13 +1,12 @@
 $roboto: "Roboto";
 $roboto-condensed: "RobotoCondensed";
-$source-sans-pro: "SourceSansPro";
 
 /* Roboto */
 
 @font-face {
   font-family: $roboto;
-  src: url("./fonts/Roboto/Roboto-Bold.woff") format("woff");
-  font-weight: 700;
+  src: url("./fonts/Roboto/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -22,23 +21,7 @@ $source-sans-pro: "SourceSansPro";
 
 @font-face {
   font-family: $roboto-condensed;
-  src: url("./fonts/RobotoCondensed/RobotoCondensed-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* SourceSansPro */
-
-@font-face {
-  font-family: $source-sans-pro;
-  src: url("./fonts/SourceSansPro/SourceSansPro-ExtraLight.woff") format("woff");
-  font-weight: 200;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: $source-sans-pro;
-  src: url("./fonts/SourceSansPro/SourceSansPro-Regular.woff") format("woff");
+  src: url("./fonts/RobotoCondensed/RobotoCondensed-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
