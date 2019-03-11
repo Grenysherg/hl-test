@@ -8,7 +8,8 @@
 
 html {
   opacity: 0;
-  transition: opacity .2s;
+
+  transition: opacity 0.2s;
 
   &.active {
     opacity: 1;
@@ -17,8 +18,8 @@ html {
 
 body {
   @include respond-to(desktop) {
-    overflow: hidden;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
   }
 }

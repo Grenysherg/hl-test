@@ -1,10 +1,11 @@
 .projects-menu {
-  $block: &;
-
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+
   list-style: none;
+
+  $block: &;
 
   &__item {
     &--active {
@@ -16,12 +17,14 @@
           position: absolute;
           top: 50%;
           left: -3rem;
+
           width: 1.9rem;
           height: 1.5rem;
-          transform: translateY(-50%);
+
           background-image: url("./images/white-arrow.png");
           background-repeat: no-repeat;
           background-size: 100% 100%;
+          transform: translateY(-50%);
         }
       }
     }
@@ -29,13 +32,15 @@
 
   &__link {
     position: relative;
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-family: $roboto-condensed;
+
+    font-weight: normal;
     font-size: 1.3rem;
     line-height: 1.4rem;
-    font-weight: normal;
+    font-family: $roboto-condensed;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+
     transition: color 0.2s;
 
     &:hover {

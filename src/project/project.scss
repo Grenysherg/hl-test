@@ -1,22 +1,23 @@
 .project {
-  $block: &;
-
   position: relative;
 
+  $block: &;
+
   &--fondue {
-    background-color: white;
     width: 100vw;
-    padding-top: 8.5rem;
-    padding-left: 9rem;
     height: 50rem;
     min-height: 37.5vh;
+    padding-top: 8.5rem;
+    padding-left: 9rem;
+
+    background-color: white;
 
     @include respond-to(desktop) {
-      padding-top: 8.5vh;
-      padding-left: 6vw;
       width: 38vw;
       height: 50vh;
       min-height: 0;
+      padding-top: 8.5vh;
+      padding-left: 6vw;
     }
 
     #{$block}__title {
@@ -30,9 +31,11 @@
     #{$block}__image {
       top: 0;
       right: 0;
-      background-image: url("./images/lamp.png");
+
       width: 100%;
       height: 100%;
+
+      background-image: url("./images/lamp.png");
       background-position: top right;
       background-size: contain;
     }
@@ -55,17 +58,18 @@
   }
 
   &--potter {
-    background-color: $quill-gray;
     width: 50vw;
-    padding-top: 3.2rem;
-    padding-left: 3rem;
     height: 25rem;
     min-height: 12.5vh;
+    padding-top: 3.2rem;
+    padding-left: 3rem;
+
+    background-color: $quill-gray;
 
     @include respond-to(desktop) {
+      width: 31vw;
       height: 25vh;
       min-height: 0;
-      width: 31vw;
       padding-top: 3.2vh;
       padding-left: 2vw;
     }
@@ -81,9 +85,11 @@
     #{$block}__image {
       top: 0;
       right: 0;
-      background-image: url("./images/stuff.png");
+
       width: 100%;
       height: 100%;
+
+      background-image: url("./images/stuff.png");
       background-position: top right;
       background-size: contain;
     }
@@ -107,17 +113,18 @@
   }
 
   &--fiji {
-    background-color: white;
     width: 50vw;
-    padding-top: 4.8rem;
-    padding-left: 30rem;
     height: 25rem;
     min-height: 12.5vh;
+    padding-top: 4.8rem;
+    padding-left: 30rem;
+
+    background-color: white;
 
     @include respond-to(desktop) {
+      width: 31vw;
       height: 25vh;
       min-height: 0;
-      width: 31vw;
       padding-top: 4.8vh;
       padding-left: 18vw;
     }
@@ -133,9 +140,11 @@
     #{$block}__image {
       top: 0;
       right: 0;
-      background-image: url("./images/armchair.png");
+
       width: 100%;
       height: 100%;
+
+      background-image: url("./images/armchair.png");
       background-position: top left;
       background-size: contain;
     }
@@ -160,34 +169,39 @@
   &__title {
     position: relative;
     z-index: 1;
+
     margin-top: 0;
     margin-bottom: 0;
-    color: $gray-51;
-    text-transform: uppercase;
-    font-family: $roboto-condensed;
+
     font-weight: 300;
     font-size: 2.4rem;
     line-height: 2.4rem;
+    font-family: $roboto-condensed;
+    color: $gray-51;
+    text-transform: uppercase;
   }
 
   &__image {
     position: absolute;
+
     background-repeat: no-repeat;
   }
 
   &__info {
     position: relative;
     z-index: 1;
+
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+
     list-style: none;
 
     &-item {
-      font-family: $roboto-condensed;
       font-weight: 300;
       font-size: 1.2rem;
       line-height: 1.2rem;
+      font-family: $roboto-condensed;
       color: $gray-51;
       text-transform: uppercase;
     }
@@ -200,34 +214,39 @@
   &__description {
     position: relative;
     z-index: 1;
+
     margin-top: 0;
     margin-bottom: 0;
-    font-family: $roboto-condensed;
+
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.2rem;
+    font-family: $roboto-condensed;
     color: $gray-51;
   }
 
   &__action {
     position: relative;
     z-index: 1;
+
     display: inline-flex;
     flex-direction: column;
     align-items: center;
   }
 
   &__link {
-    flex-shrink: 0;
     position: relative;
-    text-transform: uppercase;
-    text-decoration: none;
+
+    flex-shrink: 0;
     padding-left: 3rem;
-    font-family: $roboto-condensed;
+
     font-weight: 300;
     font-size: 1.8rem;
     line-height: 1.8rem;
+    font-family: $roboto-condensed;
     color: $gray-51;
+    text-transform: uppercase;
+    text-decoration: none;
 
     &:hover {
       &:before {
@@ -240,12 +259,15 @@
       position: absolute;
       top: 50%;
       left: 0;
+
       width: 1.9rem;
       height: 1.5rem;
-      transform: translate3d(0, -50%, 0);
+
       background-image: url("./images/orange-arrow.png");
       background-repeat: no-repeat;
       background-size: 100% 100%;
+      transform: translate3d(0, -50%, 0);
+
       transition: transform 0.2s;
     }
   }

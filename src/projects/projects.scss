@@ -1,21 +1,23 @@
 @import "./projects-menu";
 
 .projects {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: $tulip-tree;
-  position: relative;
-  height: 50rem;
-  padding-bottom: 13rem;
   width: 50vw;
+  height: 50rem;
   min-height: 25vh;
+  padding-bottom: 13rem;
+
+  background-color: $tulip-tree;
 
   @include respond-to(desktop) {
-    padding-bottom: 13vh;
-    min-height: 0;
     width: 31vw;
     height: 50vh;
+    min-height: 0;
+    padding-bottom: 13vh;
   }
 
   &:before {
@@ -23,33 +25,36 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-image: url("./images/white-line.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
 
   &__menu {
-    margin-left: 14rem;
     margin-bottom: 6.5rem;
+    margin-left: 14rem;
 
     @include respond-to(desktop) {
-      margin-left: 9vw;
       margin-bottom: 6.5vh;
+      margin-left: 9vw;
     }
   }
 
   &__title {
     margin-top: 0;
-    margin-left: 22rem;
     margin-bottom: 0;
-    color: white;
-    text-transform: uppercase;
-    font-family: $roboto-condensed;
+    margin-left: 22rem;
+
     font-weight: normal;
     font-size: 4.8rem;
     line-height: 4.8rem;
+    font-family: $roboto-condensed;
+    color: white;
+    text-transform: uppercase;
 
     @include respond-to(desktop) {
       margin-left: 13vw;

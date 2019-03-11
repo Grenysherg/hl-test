@@ -1,7 +1,9 @@
 .like {
-  text-decoration: none;
   position: relative;
+
   padding-top: 3rem;
+
+  text-decoration: none;
 
   &:hover {
     &:before {
@@ -14,20 +16,23 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate3d(-50%, 0, 0);
+
     width: 2.4rem;
     height: 2.2rem;
+
     background-image: url("./images/heart.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transform: translate3d(-50%, 0, 0);
+
     transition: transform 0.2s;
   }
 
   &__amount {
-    font-family: $roboto-condensed;
     font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.1rem;
+    font-family: $roboto-condensed;
     color: $red;
   }
 }

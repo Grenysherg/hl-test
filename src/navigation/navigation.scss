@@ -1,21 +1,23 @@
 .navigation {
-  background-color: $monte-carlo;
   position: relative;
   z-index: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 50rem;
-  padding-top: 5rem;
   width: 50vw;
+  height: 50rem;
   min-height: 25vh;
+  padding-top: 5rem;
+
+  background-color: $monte-carlo;
 
   @include respond-to(desktop) {
     justify-content: flex-start;
-    padding-top: 5vh;
-    min-height: 0;
     width: 31vw;
     height: 50vh;
+    min-height: 0;
+    padding-top: 5vh;
   }
 
   &:before {
@@ -23,8 +25,10 @@
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     background-image: url("./images/gray-line.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -44,12 +48,13 @@
     flex-shrink: 0;
     margin-bottom: 4rem;
     margin-left: 5.5rem;
-    font-family: $roboto-condensed;
+
+    font-weight: normal;
     font-size: 1.3rem;
     line-height: 1.4rem;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-family: $roboto-condensed;
     color: white;
+    text-transform: uppercase;
 
     @include respond-to(desktop) {
       margin-bottom: 4vh;
@@ -59,19 +64,20 @@
 
   &__connection {
     flex-shrink: 0;
-    margin-left: 14rem;
     margin-top: 0;
     margin-bottom: 9.6rem;
-    font-family: $roboto-condensed;
+    margin-left: 14rem;
+
+    font-weight: normal;
     font-size: 1.3rem;
     line-height: 1.4rem;
-    font-weight: normal;
-    text-transform: uppercase;
+    font-family: $roboto-condensed;
     color: white;
+    text-transform: uppercase;
 
     @include respond-to(desktop) {
-      margin-left: 10vw;
       margin-bottom: 0;
+      margin-left: 10vw;
     }
   }
 }
