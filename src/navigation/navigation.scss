@@ -1,0 +1,77 @@
+.navigation {
+  background-color: $monte-carlo;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50rem;
+  padding-top: 5rem;
+  width: 50vw;
+  min-height: 25vh;
+
+  @include respond-to(desktop) {
+    justify-content: flex-start;
+    padding-top: 5vh;
+    min-height: 0;
+    width: 31vw;
+    height: 50vh;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./images/gray-line.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__main-menu {
+    flex-shrink: 0;
+    align-self: center;
+    margin-bottom: auto;
+
+    @include respond-to(desktop) {
+      margin-bottom: 9vh;
+    }
+  }
+
+  &__address {
+    flex-shrink: 0;
+    margin-bottom: 4rem;
+    margin-left: 5.5rem;
+    font-family: $roboto-condensed;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+
+    @include respond-to(desktop) {
+      margin-bottom: 4vh;
+      margin-left: 3.5vw;
+    }
+  }
+
+  &__connection {
+    flex-shrink: 0;
+    margin-left: 14rem;
+    margin-top: 0;
+    margin-bottom: 9.6rem;
+    font-family: $roboto-condensed;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: white;
+
+    @include respond-to(desktop) {
+      margin-left: 10vw;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.like {
+  text-decoration: none;
+  position: relative;
+  padding-top: 3rem;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2.4rem;
+    height: 2.2rem;
+    background-image: url("./images/heart.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__amount {
+    font-family: $roboto-condensed;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    color: $red;
+  }
+}

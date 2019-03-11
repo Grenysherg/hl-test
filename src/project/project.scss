@@ -1,0 +1,249 @@
+.project {
+  $block: &;
+
+  position: relative;
+
+  &--fondue {
+    background-color: white;
+    width: 100vw;
+    padding-top: 8.5rem;
+    padding-left: 9rem;
+    height: 50rem;
+    min-height: 37.5vh;
+
+    @include respond-to(desktop) {
+      padding-top: 8.5vh;
+      padding-left: 6vw;
+      width: 38vw;
+      height: 50vh;
+      min-height: 0;
+    }
+
+    #{$block}__title {
+      margin-bottom: 1.5rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 1.5vh;
+      }
+    }
+
+    #{$block}__image {
+      top: 0;
+      right: 0;
+      background-image: url("./images/lamp.png");
+      width: 100%;
+      height: 100%;
+      background-position: top right;
+      background-size: contain;
+    }
+
+    #{$block}__info {
+      margin-bottom: 9rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 9vh;
+      }
+    }
+
+    #{$block}__link {
+      margin-bottom: 11rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 11vh;
+      }
+    }
+  }
+
+  &--potter {
+    background-color: $quill-gray;
+    width: 50vw;
+    padding-top: 3.2rem;
+    padding-left: 3rem;
+    height: 25rem;
+    min-height: 12.5vh;
+
+    @include respond-to(desktop) {
+      height: 25vh;
+      min-height: 0;
+      width: 31vw;
+      padding-top: 3.2vh;
+      padding-left: 2vw;
+    }
+
+    #{$block}__title {
+      margin-bottom: 1.2rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 1.2vh;
+      }
+    }
+
+    #{$block}__image {
+      top: 0;
+      right: 0;
+      background-image: url("./images/stuff.png");
+      width: 100%;
+      height: 100%;
+      background-position: top right;
+      background-size: contain;
+    }
+
+    #{$block}__description {
+      width: 17rem;
+      margin-bottom: 1.5rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 1.5vh;
+      }
+    }
+
+    #{$block}__link {
+      margin-bottom: 2rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 2vh;
+      }
+    }
+  }
+
+  &--fiji {
+    background-color: white;
+    width: 50vw;
+    padding-top: 4.8rem;
+    padding-left: 30rem;
+    height: 25rem;
+    min-height: 12.5vh;
+
+    @include respond-to(desktop) {
+      height: 25vh;
+      min-height: 0;
+      width: 31vw;
+      padding-top: 4.8vh;
+      padding-left: 18vw;
+    }
+
+    #{$block}__title {
+      margin-bottom: 2rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 2vh;
+      }
+    }
+
+    #{$block}__image {
+      top: 0;
+      right: 0;
+      background-image: url("./images/armchair.png");
+      width: 100%;
+      height: 100%;
+      background-position: top left;
+      background-size: contain;
+    }
+
+    #{$block}__info {
+      margin-bottom: 2.3rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 2.3vh;
+      }
+    }
+
+    #{$block}__link {
+      margin-bottom: 2rem;
+
+      @include respond-to(desktop) {
+        margin-bottom: 2vh;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: $gray-51;
+    text-transform: uppercase;
+    font-family: $roboto-condensed;
+    font-weight: 300;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+
+  &__image {
+    position: absolute;
+    background-repeat: no-repeat;
+  }
+
+  &__info {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+
+    &-item {
+      font-family: $roboto-condensed;
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      color: $gray-51;
+      text-transform: uppercase;
+    }
+
+    &-title {
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: $roboto-condensed;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: $gray-51;
+  }
+
+  &__action {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__link {
+    flex-shrink: 0;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-left: 3rem;
+    font-family: $roboto-condensed;
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    color: $gray-51;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1.9rem;
+      height: 1.5rem;
+      transform: translateY(-50%);
+      background-image: url("./images/orange-arrow.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &__like {
+    flex-shrink: 0;
+  }
+}

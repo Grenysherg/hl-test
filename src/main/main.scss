@@ -1,0 +1,16 @@
+.main {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__group {
+    display: inline-flex;
+
+    @include respond-to(desktop) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+}

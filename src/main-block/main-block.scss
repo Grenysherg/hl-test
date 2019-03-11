@@ -1,0 +1,57 @@
+.main-block {
+  background-color: $cararra;
+  position: relative;
+  padding-left: 16.5rem;
+  padding-top: 5rem;
+  height: 50rem;
+  min-height: 25vh;
+  width: 100vw;
+
+  @include respond-to(desktop) {
+    width: 69%;
+    padding-left: 11vw;
+    padding-top: 5vh;
+    padding-bottom: 0;
+    height: 50vh;
+  }
+
+  &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 63.2rem;
+      height: 44.1rem;
+      background-image: url("./images/chairs.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+  }
+
+  &__logo {
+    margin-bottom: 6rem;
+
+    @include respond-to(desktop) {
+      margin-bottom: 6vh;
+    }
+
+    &-image {
+      width: 16.2rem;
+      height: 20.7rem;
+      background-image: url("./images/logo-dsgn.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin-bottom: 0.5rem;
+    }
+
+    &-text {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-family: $roboto-condensed;
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: $cape-cod;
+    }
+  }
+}

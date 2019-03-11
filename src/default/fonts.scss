@@ -25,3 +25,10 @@ $roboto-condensed: "RobotoCondensed";
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: $roboto-condensed;
+  src: url("./fonts/RobotoCondensed/RobotoCondensed-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}

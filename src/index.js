@@ -12,7 +12,10 @@ import './index.scss';
 
 /* Blocks */
 
-
+import rebuildRem from './default/rebuild-rem';
 
 /* Init */
 
+rebuildRem();
+
+$(window).on('resize', rebuildRem);
