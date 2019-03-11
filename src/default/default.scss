@@ -6,6 +6,15 @@
   box-sizing: border-box;
 }
 
+html {
+  opacity: 0;
+  transition: opacity .2s;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
 body {
   @include respond-to(desktop) {
     overflow: hidden;

@@ -7,6 +7,7 @@ const TEMPLATE_DESKTOP_HEIGHT = 1000;
 const TEMPLATE_DESKTOP_RATIO = TEMPLATE_DESKTOP_HEIGHT / TEMPLATE_DESKTOP_WIDTH;
 
 const $html = $("html");
+const activeClassName = "active";
 
 export default () => {
   let width = window.innerWidth;
@@ -14,10 +15,8 @@ export default () => {
   let ratio = height / width;
 
   if (isDesktop()) {
-    console.log(true);
     if (ratio <= TEMPLATE_DESKTOP_RATIO) {
       let newWidth = height / TEMPLATE_DESKTOP_RATIO;
-      console.log(newWidth);
       $html.css({
         "font-size": `${(newWidth / TEMPLATE_DESKTOP_WIDTH) * FACTOR}px`
       });
@@ -30,4 +29,8 @@ export default () => {
   } else {
     $html.css({ "font-size": `${(width / TEMPLATE_MOBILE_WIDTH) * FACTOR}px` });
   }
+
+  setTimeout(() => {
+    $html.addClass(activeClassName);
+  }, 100);
 };

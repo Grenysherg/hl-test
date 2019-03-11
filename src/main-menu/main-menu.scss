@@ -22,18 +22,30 @@
     }
   }
 
-  &__container {
+  &__wrapper {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100vw;
     height: 100%;
-    background-color: $saffron-mango;
+    pointer-events: none;
+    display: none;
+
+    @include respond-to(desktop) {
+      width: 50vw;
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &__additional {
+    height: 100%;
+    pointer-events: all;
     display: flex;
     align-items: center;
 
     @include respond-to(desktop) {
-      left: auto;
-      right: 0;
+      justify-content: flex-end;
     }
   }
 
@@ -42,6 +54,7 @@
     font-size: 0;
     width: 12.1rem;
     height: 100%;
+    background-color: $saffron-mango;
     background-image: url("./images/menu-close.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -68,6 +81,7 @@
   }
 
   &__item {
+    background-color: $saffron-mango;
     flex-shrink: 0;
     height: 100%;
   }
@@ -85,5 +99,10 @@
     color: white;
     width: 12.1rem;
     height: 100%;
+    transition: color .2s;
+
+    &:hover {
+      color: black;
+    }
   }
 }

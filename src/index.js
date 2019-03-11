@@ -8,14 +8,15 @@ import './index.scss';
 
 /* Default */
 
-
+import rebuildRem from './default/rebuild-rem';
 
 /* Blocks */
 
-import rebuildRem from './default/rebuild-rem';
+import mainMenu from './main-menu/main-menu';
 
 /* Init */
 
 rebuildRem();
+mainMenu();
 
 $(window).on('resize', rebuildRem);

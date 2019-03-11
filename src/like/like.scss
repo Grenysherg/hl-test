@@ -3,17 +3,24 @@
   position: relative;
   padding-top: 3rem;
 
+  &:hover {
+    &:before {
+      transform: translate3d(-50%, 0, 0) scale(1.1);
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate3d(-50%, 0, 0);
     width: 2.4rem;
     height: 2.2rem;
     background-image: url("./images/heart.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    transition: transform 0.2s;
   }
 
   &__amount {
